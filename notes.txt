@@ -1,0 +1,8 @@
+#To start Project Backend
+    npm init -y to generate the package.json
+    Dockerfile with alpine for the container
+    make sure to add  "start":"node app.js" to package.json
+    run locally then use $docker build . to make container
+    test docker container by running #docker run -it -p 80:80 [longnumber from  the previos step] (-p 80:80 will map the exposed port)
+    
+    
