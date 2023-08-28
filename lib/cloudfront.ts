@@ -17,7 +17,7 @@ interface CustomStackProps extends cdk.StackProps {
 }
 
 export class CloudfrontDemoStack extends cdk.Stack {
-  constructor(scope: Construct, id: string, props: CustomStackProps) {
+  constructor(scope: Construct, id: string, props: cdk.StageProps) {
     super(scope, id, props);
     
     // Importing ALB domain name
