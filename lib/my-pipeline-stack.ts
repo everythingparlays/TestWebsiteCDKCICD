@@ -13,7 +13,7 @@ export class MyPipelineStack extends cdk.Stack {
         input: CodePipelineSource.gitHub('everythingparlays/TestWebsiteCDKCICD', 'main',{
             authentication: cdk.SecretValue.secretsManager('github-token', {jsonField:'github-token'})// Provide the GitHub token here
           }),
-        commands: ['npm ci', 'npm run build', 'cdk synth']
+        commands: ['npm ci', 'npm run build', 'npx cdk synth']
       })
     });
 
