@@ -16,7 +16,7 @@ export class MyPipelineStack extends cdk.Stack {
         commands: ['npm ci', 'npm run build', 'npx cdk synth']
       })
     });
-
+    //add comment
     const devStage = pipeline.addStage(new MyPipelineAppStage(this, "devStage",{...props, stageName: "dev"}));
 
     devStage.addPost(new ManualApprovalStep('approval'));
